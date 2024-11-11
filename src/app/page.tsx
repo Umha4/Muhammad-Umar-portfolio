@@ -1,113 +1,169 @@
+"use client";
+import React from "react";
+import { FaFacebookSquare } from "react-icons/fa";
+import { FaLinkedin, FaSquareGithub } from "react-icons/fa6";
+// import { FaSquareInstagram } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
+import Link from "next/link";
+import AfterHero from "@/components/afterhero";
+import Services from "@/components/myprojects";
 import Image from "next/image";
+import Typewriter from "typewriter-effect";
+import AboutMe from "@/components/aboutus";
+import Skills from "@/components/myskills";
+// import { Carousels } from "@/components/projectcarosel";
+// import Footer from "@/components/footer";
 
-export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+const Home = () => (
+  <>
+    <main className="max-w-screen-2xl mx-auto font-sans bg-gradient-to-r from-blue-100 via-blue-200  to-black   h-[630px] w-auto">
+      <div className="flex w-full h-[630px]">
+        {/* left div */}
+        <div className="flex-1 w-[50%] pt-10">
+          <p className="text-gray-900 text-2xl sm:text-2xl md:text-4xl lg:text-4xl font-bold flex justify-center pt-16">
+            Hello I am
+          </p>
+          <div className="  flex text-blue-900 lg:text-4xl xl:text-5xl md:text-5xl text-3xl font-bold  justify-center pt-5">
+            <Typewriter
+              options={{
+                strings: ["Muhammad Umar","Full-Stack Developer"],
+                autoStart: true,
+                loop: true,
+              }}
             />
-          </a>
+          </div>
+          <p className="text-gray-800 font-semibold md:font-semibold flex pl-6 lg:pl-0 justify-center lg:text-[18px] md:text-[18px] text-[16px]  pt-5">
+            I am Muhammad Umar, a full stack developer skilled in Next.js, <br />{" "}
+            TypeScript, and Tailwind CSS. I create efficient, seamless <br />{" "}
+            web experiences from design to deployment.
+          </p>
+          {/* button */}
+          <div className="gap-2 lg:flex lg:pl-16 xl:pl-24 md:pl-10 sm:pl-4 pt-6 md:pt-8 block ">
+            <button className="hover:animate-shadow-pulse mt-2 px-3  sm:gap-1 md:gap-2 flex lg:px-2 sm:px-2 md:h-[55px] sm:h-[50px] justify-center items-center hover:border-white hover:border-[2px] hover:bg-blue-500  bg-blue-900 border-2 border-white rounded-[30px] sm:mt-4 ">
+              <div className="">
+                <svg
+                  className="animate-bounce"
+                  width="17"
+                  height="16"
+                  viewBox="0 0 17 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.5 1C9.5 0.446875 9.05313 0 8.5 0C7.94688 0 7.5 0.446875 7.5 1V8.58438L5.20625 6.29063C4.81563 5.9 4.18125 5.9 3.79063 6.29063C3.4 6.68125 3.4 7.31563 3.79063 7.70625L7.79063 11.7063C8.18125 12.0969 8.81563 12.0969 9.20625 11.7063L13.2063 7.70625C13.5969 7.31563 13.5969 6.68125 13.2063 6.29063C12.8156 5.9 12.1812 5.9 11.7906 6.29063L9.5 8.58438V1ZM2.5 11C1.39688 11 0.5 11.8969 0.5 13V14C0.5 15.1031 1.39688 16 2.5 16H14.5C15.6031 16 16.5 15.1031 16.5 14V13C16.5 11.8969 15.6031 11 14.5 11H11.3281L9.9125 12.4156C9.13125 13.1969 7.86562 13.1969 7.08437 12.4156L5.67188 11H2.5ZM14 12.75C14.1989 12.75 14.3897 12.829 14.5303 12.9697C14.671 13.1103 14.75 13.3011 14.75 13.5C14.75 13.6989 14.671 13.8897 14.5303 14.0303C14.3897 14.171 14.1989 14.25 14 14.25C13.8011 14.25 13.6103 14.171 13.4697 14.0303C13.329 13.8897 13.25 13.6989 13.25 13.5C13.25 13.3011 13.329 13.1103 13.4697 12.9697C13.6103 12.829 13.8011 12.75 14 12.75Z"
+                    fill="#F8F8F8"
+                  />
+                </svg>
+              </div>
+              <p className="lg:font-bold sm:font-semibold  text-white ">
+              <Link href="/mycv.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD CV</Link>
+              </p>
+            </button>
+            <div className=" flex pt-6  lg:gap-4 md:gap-2 lg:pl-6 md:pl-4 sm:pl-2 sm:gap-2 ">
+              <div className="md:text-5xl text-4xl text-black hover:text-blue-400">
+                <Link
+                  href="https://www.facebook.com/profile.php?id=61561757791609"
+                  legacyBehavior
+                >
+                  <a target="_blank" rel="noopener noreferrer">
+                    <FaFacebookSquare className="" />
+                  </a>
+                </Link>
+              </div>
+              <div className="md:text-5xl text-4xl text-black hover:text-gray-700">
+                <Link href="https://x.com/UmmeHabiba1312" legacyBehavior>
+                  <a target="_blank" rel="noopener noreferrer">
+                    <FaSquareXTwitter />
+                  </a>
+                </Link>
+              </div>
+              <div className="md:text-5xl text-4xl text-black hover:text-blue-700">
+                <Link
+                  href="https://www.linkedin.com/in/umm-e-habiba-86bb722b6/"
+                  legacyBehavior
+                >
+                  <a target="_blank" rel="noopener noreferrer">
+                    <FaLinkedin />
+                  </a>
+                </Link>
+              </div>
+              <div className="md:text-5xl text-4xl text-black hover:text-gray-600">
+                <Link
+                  href="https://github.com/UmmeHabiba1312"
+                  legacyBehavior
+                >
+                  <a target="_blank" rel="noopener noreferrer">
+                  <FaSquareGithub />
+                  </a>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* right div */}
+        <div className="flex-1 w-[50%] flex  lg:pl-12 pl-2 sm:pl-5 h-auto">
+          <div className="pt-52 xl:pt-32 hidden lg:block">
+            {/* <Image
+              className=" xl:h-[105px] xl:w-[145px] h-[90px]  "
+              height={500}
+              width={500}
+              src="/nextjs.png"
+              alt="nextjs"
+            />
+            <Image
+              className="w-[45px] h-[45px] xl:h-[65px] xl:w-[165px] xl:pr-[35px] lg:w-[120px] lg:pr-10 mt-10 mr-2"
+              height={500}
+              width={500}
+              src="/typescript.png"
+              alt="typescript"
+            /> */}
+            {/* <Image
+              className="h-[45px] w-[95px] xl:h-[72px] xl:w-[115px]  mt-[94px]  pl-[40px]"
+              height={500}
+              width={500}
+              src="/html.png"
+              alt="css"
+            /> */}
+          </div>
+          <Image
+            className=" h-[500px] md:w-[400px] lg:w-[310px]v xl:w-[390px]  sm:w-[350px] w-[270px] justify-center pl-5  text-center"
+            height={500}
+            width={500}
+            src="/hero.png"
+            alt="profile pic"
+          />
+          {/* <div className="md:pt-52 xl:pt-32 pt-60 hidden lg:block">
+            <Image
+              className="xl:h-[75px] xl:w-[65px]  h-[55px] w-[55px] rounded-xl"
+              height={500}
+              width={500}
+              src="/tailwindcss.png"
+              alt="tailwind"
+            />
+            <Image
+              className="xl:h-[100px] xl:w-[140px] h-[70px]    mt-10 xl:pl-12 pl-6"
+              height={500}
+              width={500}
+              src="/javascript.png"
+              alt="javascript"
+            />
+            <Image
+              className="h-[70px] w-[170px] xl:h-[90px] xl:w-[260px] mt-16  "
+              height={500}
+              width={500}
+              src="/css.png"
+              alt="html"
+            />
+          </div> */}
         </div>
       </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      <AfterHero />
+      <AboutMe/>
+      <Services />
+      <Skills/>
+      {/* <Carousels/> */}
     </main>
-  );
-}
+  </>
+);
+
+export default Home;
