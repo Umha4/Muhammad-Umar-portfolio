@@ -20,8 +20,8 @@ export default function MySkills() {
 
     return (
       <>
-        <div className="max-w-screen-2xl mx-auto bg-gradient-to-r from-blue-100 via-blue-200  to-black px-6 md:px-10 lg:px-14 py-12 rounded-lg shadow-lg pb-40">
-           <h2 className={`  text-pink-900 text-2xl md:text-3xl lg:text-4xl font-bold text-center pt-2 sm:pt-4`}>
+        <div className=" bg-white px-6 md:px-10 lg:px-14 py-12 rounded-lg shadow-lg pb-40  overflow-x-hidden max-w-screen-2xl mx-auto">
+           <h2 className={`  text-blue-900 text-2xl md:text-3xl lg:text-4xl font-bold text-center pt-2 sm:pt-4`}>
             My Skills
           </h2>
           <p className="text-black font-bold text-center mt-4 text-base sm:text-lg">

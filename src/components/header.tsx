@@ -17,31 +17,31 @@ import {
 
 const Header = () => {
   return (
-    <><main className='max-w-screen-2xl mx-auto bg-gradient-to-r from-blue-100 via-blue-200  to-black h-[100px]  pt-3 w-auto sticky'>
+    <><main className='max-w-screen-2xl mx-auto bg-black  h-[100px]  pt-3 w-auto sticky '>
         <div className='flex justify-around w-full'>
         
           <div className='flex lg:gap-20 '>
           
           {/* logo */}
           <div className=' text-center flex items-center'>  
-        <div className="text-2xl font-extrabold  text-gray-900 lg:text-3xl md:text-2xl  md:font-semibold font-serif items-center flex">
+        <div className="text-2xl font-extrabold  text-white lg:text-3xl md:text-2xl  md:font-semibold font-serif items-center flex">
           PORTFOLIO
         </div>
         </div>
           </div>
 
         {/* content div */}
-        <div className="hidden  sm:hidden md:hidden  md:font-medium lg:flex items-center text-gray-900  lg:text-[16px] lg:font-extrabold lg:gap-8">
-          <div className="hover:text-pink-900 hover:border-b-4 hover:border-pink-900"><Link href="/">Home</Link></div>
-          <div className="hover:text-pink-900 hover:border-b-4 hover:border-pink-900"><Link href="/about">About</Link></div>
-          <div className="hover:text-pink-900 hover:border-b-4 hover:border-pink-900"><Link href="/projects">Projects</Link></div>
-          <div className="hover:text-pink-900 hover:border-b-4 hover:border-pink-900"><Link href="/skills">Skills</Link></div>
-          <div className="hover:text-pink-900 hover:border-b-4 hover:border-pink-900"><Link href="/contact">Contact</Link></div>
+        <div className="hidden  sm:hidden md:hidden  md:font-medium lg:flex items-center text-white  lg:text-[16px] lg:font-extrabold lg:gap-8">
+          <div className="hover:border-b-4 hover:border-blue-900"><Link href="/">Home</Link></div>
+          <div className="hover:border-b-4 hover:border-blue-900"><Link href="/about">About</Link></div>
+          <div className="hover:border-b-4 hover:border-blue-900"><Link href="/projects">Projects</Link></div>
+          <div className="hover:border-b-4 hover:border-blue-900"><Link href="/skills">Skills</Link></div>
+          <div className="hover:border-b-4 hover:border-blue-900"><Link href="/contact">Contact</Link></div>
         </div>
 
         <div className="h-[90px]  hidden lg:block"> 
                  {/* Button for download cv */}
-        <button className=" px-2 gap-1 mt-5 sm:gap-2 flex lg:px-2 sm:px-2 h-[55px] justify-center items-center bg-blue-900 border-2 border-white border-b-2 hover:bg-blue-400 rounded-[30px] sm:mt-5 ">
+        <button className=" px-2 gap-1 mt-5 sm:gap-2 flex lg:px-2 sm:px-2 h-[55px] justify-center items-center bg-blue-900 hover:bg-blue-700   rounded-[30px] sm:mt-5 ">
           <div className="">
              <svg
              className="animate-bounce"
@@ -56,8 +56,9 @@ const Header = () => {
                 fill="#F8F8F8"
               />
             </svg></div>
-          <p className="lg:font-bold sm:font-semibold text-white "><Link href="/mycv.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD CV</Link></p></button></div>
+          <p className="lg:font-bold sm:font-semibold text-white "><Link href="/mycv-png.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD CV</Link></p></button></div>
           {/* hamburger */}
+          
       <div className='lg:hidden  '>
       <Sheet >
   <SheetTrigger>
