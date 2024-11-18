@@ -7,7 +7,7 @@ const ProjectSection = () => (
     <div className="text-center mb-12">
       <h2 className="text-4xl font-bold text-blue-900">My Projects</h2>
       <p className="text-lg mt-4 text-gray-600">
-        A showcase of some of the projects I've developed, from full-stack applications to creative front-end designs.
+        A showcase of some of the projects I have developed, from full-stack applications to creative front-end designs.
       </p>
     </div>
 
